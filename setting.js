@@ -67,6 +67,14 @@
     };
     $(".tc_wl-tcplayer-comment-input").val("");
     })
+
+$('#dmtext').on('keyup', function (e) {
+      if (e.keyCode == 13) {
+        console.log('回车')
+        $(".tc_wl-tcplayer-send-icon").trigger("click")
+      }
+
+    })
 dp.danmaku.opacity(1);
     //弹幕列表获取
 	
@@ -122,3 +130,4 @@ function video_con_play() {
          $(".conplaying").on("click", function () {clearTimeout(timer);$("#laoding-pic,#loading-box").remove();dp.play();});
          $(".conplay-jump,.play-jump").on("click", function () {clearTimeout(timer);video_seek();$("#laoding-pic,.memory-play-wrap,#loading-box").remove();dp.play();});
 	};
+
