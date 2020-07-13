@@ -35,7 +35,7 @@
     //播放结束回调		
     function endedHandler() {
     setCookie("time_"+ vodurl,"",-1);
-    if (next!='') {dp.notice("5s后,将自动为您播放下一集");setTimeout(function () {video_next();}, 5 * 1000);
+    if (next!='') {dp.notice("3s后,将自动为您播放下一集");setTimeout(function () {video_next();}, 3 * 1000);
          } else{dp.notice("视频播放已结束");setTimeout(function () {video_end();}, 2 * 1000); }}
     if (next!=''){ }else {$(".icon-xj").remove();};
     function video_next() {top.location.href = playnext;}
